@@ -14,3 +14,9 @@ C:\Users\valto\source\repos\Calculator\Calculator\obj\Debug\Calculator.csproj.Co
 C:\Users\valto\source\repos\Calculator\Calculator\obj\Debug\Calculator.exe
 C:\Users\valto\source\repos\Calculator\Calculator\obj\Debug\Calculator.pdb
 C:\Users\valto\source\repos\Calculator\Calculator\obj\Debug\App.baml
+C:\Users\valto\source\repos\Calculator\Calculator\bin\Debug\MaterialDesignColors.dll
+C:\Users\valto\source\repos\Calculator\Calculator\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\valto\source\repos\Calculator\Calculator\bin\Debug\MaterialDesignColors.pdb
+C:\Users\valto\source\repos\Calculator\Calculator\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\valto\source\repos\Calculator\Calculator\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\valto\source\repos\Calculator\Calculator\obj\Debug\Calculator.csproj.CopyComplete

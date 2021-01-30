@@ -3,9 +3,36 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="Calculator" Height="550" Width="350">
+    <Window.Resources>
+        <SolidColorBrush x:Key="numbersColor" Color="#333333"/>
+        <SolidColorBrush x:Key="operatorsColor" Color="Green"/>
+        <SolidColorBrush x:Key="foregroundColor" Color="WhiteSmoke"/>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="70"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="numbersButtonStyle">
+            <Setter Property="Foreground" Value="{StaticResource foregroundColor}"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="{StaticResource numbersColor}"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="operatorsButtonStyle" BasedOn="{StaticResource numbersButtonStyle}">
+            <Setter Property="Background" Value="Orange"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="additionalButtonStyle" BasedOn="{StaticResource numbersButtonStyle}">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+    </Window.Resources>
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -33,7 +60,8 @@
             Content="AC"
             Click="ResetCalculator"
             Style="{StaticResource additionalButtonStyle}"
-            Grid.Row="1"/>
+            Grid.Row="1"
+            Grid.ColumnSpan="2"/>
         
         <Button Content="Sup"
                 Click="DeleteLastChar"
@@ -121,10 +149,22 @@
                 Click="SelectButton"
                 Style="{StaticResource operatorsButtonStyle}"
                 Grid.Row="6" />
+        <Button Content="{materialDesign:PackIcon ArrowLeftThick, Size=25}"
+                Click="CursorAction"
+                Tag="false"
+                Style="{StaticResource operatorsButtonStyle}"
+                Grid.Column="1"
+                Grid.Row="6" />
+        <Button Content="{materialDesign:PackIcon ArrowRightThick, Size=25}"
+                Click="CursorAction"
+                Tag="true"
+                Style="{StaticResource operatorsButtonStyle}"
+                Grid.Column="2"
+                Grid.Row="6" />
         <Button Content=")"
                 Click="SelectButton"
                 Style="{StaticResource operatorsButtonStyle}"
-                Grid.Column="2"
+                Grid.Column="3"
                 Grid.Row="6" />
     </Grid>
 </Window>
